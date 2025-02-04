@@ -1,0 +1,12 @@
+Introduction to Unix Architecture
+Unix is a multi-user, multitasking operating system known for its stability, security, and flexibility. Developed in the 1970s at AT&T Bell Labs, Unix has influenced many modern operating systems, including Linux and macOS.
+
+Key Components of Unix Architecture:
+
+Kernel – The core of Unix, managing hardware resources, memory, process scheduling, and system calls. It operates in privileged mode.
+Shell – The interface between users and the kernel, allowing command execution. Popular shells include Bash, KornShell (ksh), and C Shell (csh).
+File System – Unix follows a hierarchical file system starting from the root (/). Everything, including devices, is treated as a file.
+Processes – Unix is multiprocessing, allowing background and foreground process execution. Each process has a Process ID (PID).
+System Calls – Low-level functions allowing interaction between user programs and the kernel. Examples include fork(), exec(), and open().
+Networking – Unix has built-in networking capabilities, supporting TCP/IP, SSH, FTP, and NFS.
+Unix follows the philosophy of small, modular programs that perform specific tasks, allowing for flexibility and efficiency. Its architecture makes it ideal for servers, embedded systems, and enterprise applications.
