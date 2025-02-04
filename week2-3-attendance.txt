@@ -1,0 +1,10 @@
+The binary number system is a base-2 numeral system used in computing and digital electronics. It consists of only two digits: 0 and 1. Each digit in a binary number represents a power of 2, making it essential for machine-level operations in computers.
+
+The decimal number system, or base-10 system, is the standard numbering system used in everyday life. It consists of ten digits: 0 to 9. Each digit’s place value is a power of 10.
+
+The hexadecimal number system is a base-16 system, commonly used in computing to represent binary numbers in a more compact form. It includes digits 0-9 and letters A-F (where A=10, B=11, ..., F=15). Hexadecimals are widely used in memory addresses, color codes, and machine-level programming.
+
+Data Representation in Computers:
+Computers represent all data using binary. Text is stored using encoding schemes like ASCII (7-bit or 8-bit) or Unicode (allowing representation of multiple languages). Images and videos use binary-coded formats like JPEG, PNG, and MP4. Numbers are stored as integers (whole numbers) or floating-point numbers (decimals) using IEEE 754 standard.
+
+Each type of data—numbers, text, images, and sound—is ultimately converted into a binary format, ensuring compatibility with digital processors. Efficient data representation is crucial for memory optimization and processing speed.
