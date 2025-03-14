@@ -1,45 +1,35 @@
 #include <stdio.h>
-#include <string.h>
 
-// function to reverse the given string in-place
-void reverseString(char *str) {
-    // check if the input string is NULL or empty, and if so, do nothing
-    if (str == NULL || *str == '\0') {
-        return; 
+// function to compress the string by counting consecutive occurrences of each character
+void compressString(char* s) {
+    int i = 0, w = 0; // 'i' for the current position in the input string, 'w' for the write position
+    // loop through the string until we reach the null terminator
+    while (s[i]) {
+        char c = s[i];
+        int count = 0;
+
+        // count how many times the current character repeats consecutively
+        while (s[i] == c) {
+            count++;
+            i++;
+        }
+
+        // write the character at the new position
+        s[w++] = c;
+        
+        // write the count of the character (if greater than 1) at the next position
+        int len = sprintf(s + w, "%d", count);
+        w += len; 
     }
 
-    char *start = str;
-    char *end = str + strlen(str) - 1; // point to the last character of the string
-
-    // loop until the start and end pointers meet or cross each other
-    while (start < end) {
-        // swap the characters at the start and end pointers
-        char temp = *start;
-        *start++ = *end; 
-        *end-- = temp;  
-    }
+    // add a null terminator at the end of the compressed string
+    s[w] = '\0';
 }
 
+
 int main() {
-    char input[1000]; // buffer to store the input string
-    
-    printf("Enter a string: ");
-    
-   
-    if (fgets(input, sizeof(input), stdin) == NULL) {
-        return 1; // if input reading fails, return with error code
-    }
-    
-    size_t len = strlen(input);
-    
-    // check if the input string ends with a newline character (fgets includes this)
-    if (len > 0 && input[len - 1] == '\n') {
-        input[len - 1] = '\0'; // remove the newline character
-    }
-
-    reverseString(input);
-
-    printf("Reversed string: %s\n", input);
-    
+    char str[] = "aaabbc"; 
+    compressString(str); 
+    printf("%s\n", str);
     return 0; 
 }
