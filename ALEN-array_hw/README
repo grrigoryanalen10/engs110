@@ -1,0 +1,9 @@
+
+To compile:
+        > make
+
+To run:
+        ./exe
+
+The application fails with assert.
+Need to implement functions in array.c marked with TODO.
